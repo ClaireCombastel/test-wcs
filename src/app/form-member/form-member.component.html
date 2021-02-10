@@ -1,13 +1,16 @@
-<div class="container">
+<div class="container-fluid container-form mt-5">
   <h2 class="text-center">Ajouter un(e) Argonaute(s)</h2>
   <div class="row">
-    <form  [formGroup]="membersForm" (ngSubmit)="onSubmitMembersForm()" class="form-inline mt-3">
-      <div class="form-group  mb-2">
-        <label for="name" class="p-2">Nom de l&apos;Argonaute</label>
-        <input type="text" class="form-control m-2" formControlName="name" id="name" placeholder="Charalampos">
-      </div>
-      <button type="submit" class="btn btn-primary mb-2" (Click)="resetForm" [disabled]="membersForm.invalid">Envoyer</button>
-    </form>
+    <div>
+      <form  [formGroup]="membersForm" (ngSubmit)="onSubmitMembersForm()" class="form-inline mt-3">
+        <div class="form-group  mb-2">
+          <label for="name" class="p-2">Nom de l&apos;Argonaute</label>
+          <input type="text" class="form-control m-2" formControlName="name" id="name" placeholder="Charalampos">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2" (Click)="resetForm" [disabled]="membersForm.invalid">Envoyer</button>
+      </form>
+    </div>
   </div>
+  <hr class="m-5">
 </div>
 
