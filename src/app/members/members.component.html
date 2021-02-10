@@ -1,0 +1,12 @@
+<div class="container">
+  <h2 class="text-center">Membres de l'équipage</h2>
+  <div class="row mt-5 border border-primary">
+    <div class="col-md-4   member-item"  *ngFor="let member of members">
+      <p>{{ member.name }}</p>
+    </div>
+  </div>
+  <p [ngStyle]="{color: getTeamComplete()}">
+    <span *ngIf="members.length < 50 ">L'équipage n'est pas complet. il faut encore ajouter {{ 50 - members.length }} Argonaute(s)</span>
+    <span *ngIf="members.length >= 50 ">L'équipage est complet</span>
+  </p>
+</div>
